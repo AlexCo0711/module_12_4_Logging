@@ -18,11 +18,13 @@ class RunnerTest1(unittest.TestCase):
                 walk_.walk()
             # методом assertEqual сравниваем distance этого объекта со значением 50
             self.assertEqual(walk_.distance, 50)
+            # логирование INFO
             logging.info('"test_walk" выполнен успешно')
             # вывод на консоль если все правильно
             # print ('Test "walk" OK')
         # блок except выполняется, если в блоке try нашлась ошибка
         except ValueError as e:
+            # логирование на уровне WARNING
             logging.warning(f'Неверная скорость для Runner. \n{e}')
 
     # метод test_run
@@ -36,11 +38,13 @@ class RunnerTest1(unittest.TestCase):
                 run_.run()
             # методом assertEqual сравниваем distance этого объекта со значением 100
             self.assertEqual(run_.distance, 100)
+            # логирование INFO
             logging.info('"test_run" выполнен успешно')
             # вывод на консоль если все правильно
             # print('Test "run" OK')
         # блок except выполняется, если в блоке try нашлась ошибка
         except TypeError as e:
+            # логирование на уровне WARNING
             logging.warning(f'Неверный тип данных для объекта Runner. \n{e}')
 
 
