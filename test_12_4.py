@@ -5,7 +5,6 @@ import unittest
 import logging
 import rt_with_exceptions as rr
 
-# класс Runner, наследуемый от TestCase из модуля unittest
 class RunnerTest1(unittest.TestCase):
 
     # метод test_walk
@@ -23,8 +22,8 @@ class RunnerTest1(unittest.TestCase):
             # вывод на консоль если все правильно
             # print ('Test "walk" OK')
         # блок except выполняется, если в блоке try нашлась ошибка
-        except ValueError:
-            logging.warning('Неверная скорость для Runner')
+        except ValueError as e:
+            logging.warning(f'Неверная скорость для Runner. \n{e}')
 
     # метод test_run
     def test_run(self):
@@ -41,8 +40,8 @@ class RunnerTest1(unittest.TestCase):
             # вывод на консоль если все правильно
             # print('Test "run" OK')
         # блок except выполняется, если в блоке try нашлась ошибка
-        except TypeError:
-            logging.warning('Неверный тип данных для объекта Runner')
+        except TypeError as e:
+            logging.warning(f'Неверный тип данных для объекта Runner. \n{e}')
 
 
     # # метод test_challenge
