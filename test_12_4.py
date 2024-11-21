@@ -5,6 +5,18 @@ import unittest
 import logging
 import rt_with_exceptions as rr
 
+# Желательно basicConfig указывать после импортов
+# basicConfig настроен на  параметры:
+#     Уровень - INFO
+#     Режим - запись с заменой('w')
+#     Название файла - runner_tests.log
+#     Кодировка - UTF-8
+#     Формат вывода - на своё усмотрение, обязательная информация: уровень логирования, сообщение логирования.
+logging.basicConfig(level=logging.INFO, filemode='w',
+                    filename='runner_tests.log', encoding='utf-8',
+                    format='%(asctime)s | %(levelname)s | %(message)s')
+
+
 class RunnerTest1(unittest.TestCase):
 
     # метод test_walk
@@ -62,12 +74,5 @@ class RunnerTest1(unittest.TestCase):
     #     # вывод на консоль если все правильно
     #     print('Test "challenge" OK')
 
-# basicConfig настроен на  параметры:
-#     Уровень - INFO
-#     Режим - запись с заменой('w')
-#     Название файла - runner_tests.log
-#     Кодировка - UTF-8
-#     Формат вывода - на своё усмотрение, обязательная информация: уровень логирования, сообщение логирования.
-logging.basicConfig(level=logging.INFO, filemode='w',
-                    filename='runner_tests.log', encoding='utf-8',
-                    format='%(asctime)s | %(levelname)s | %(message)s')
+if __name__ == '__main__':
+    unittest.main()    
