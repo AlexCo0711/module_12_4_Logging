@@ -5,7 +5,7 @@ import unittest
 import logging
 import rt_with_exceptions as rr
 
-# Желательно basicConfig указывать после импортов
+# Желательно basicConfig указывать после импортов до написания кода программы
 # basicConfig настроен на  параметры:
 #     Уровень - INFO
 #     Режим - запись с заменой('w')
