@@ -34,7 +34,7 @@ class RunnerTest1(unittest.TestCase):
             logging.info('"test_walk" выполнен успешно')
             # вывод на консоль если все правильно
             # print ('Test "walk" OK')
-        # блок except выполняется, если в блоке try нашлась ошибка
+        # блок except выполняется, если в блоке try нашлась ошибка значения переменной
         except ValueError as e:
             # логирование на уровне WARNING
             logging.warning(f'Неверная скорость для Runner. \n{e}')
@@ -54,7 +54,7 @@ class RunnerTest1(unittest.TestCase):
             logging.info('"test_run" выполнен успешно')
             # вывод на консоль если все правильно
             # print('Test "run" OK')
-        # блок except выполняется, если в блоке try нашлась ошибка
+        # блок except выполняется, если в блоке try нашлась ошибка типа переменной
         except TypeError as e:
             # логирование на уровне WARNING
             logging.warning(f'Неверный тип данных для объекта Runner. \n{e}')
